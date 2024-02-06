@@ -1,0 +1,265 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wgt@300&display=swap');
+*{
+    margin:0;
+    padding: 0;
+}
+.sidebar{
+    width: 10vw;
+    height: 100vh;
+    /* background-color: red; */
+    background-color: rgb(223,218,218);
+    font-family: 'Montserrat', sans-serif;
+}
+.sidebar nav{
+    padding: 45px;
+}
+
+.sidebar nav li{
+    list-style: none;
+    font-size: 20px;
+    padding: 15px 0;
+}
+.sidebar nav li a{
+    text-decoration: none;
+    color: black;
+}
+.main{
+    /* background-color: yellow; */
+    width: 90vw;
+}
+
+.container{
+    display: flex;
+}
+
+.infocontainer{
+    height: 58vh;
+    width: 80vw;
+    margin: 144px auto;
+    display: flex;
+    justify-content: space-around;
+}
+.devInfo{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+
+}
+.devPic img{
+    /* height : 78px; */
+    flex-direction: column;
+    height: 500px;
+    flex-direction: column;
+    width: 344px;
+}
+.hello{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+}
+.name{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+}
+.about{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+}
+.moreabout{
+    font-size: 22px;
+    margin-top: 23px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.buttons button{
+    padding: 9px 14px;
+    border-radius: 22 px;
+    color: rgb(255, 255, 255);
+    background-color: #574caf;
+    font-weight: bold;
+    font-size: 21px;
+    margin:0 3px;
+    cursor: pointer;
+}
+.contactform{
+    padding-top: 100px;
+    padding: 0px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.contactform h1{
+    font-family: 'Montserrat', sans-serif;
+    
+}
+.contactform div{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contactform form div input{
+    width: 26vw;
+    border-radius: 5px;
+    margin: 6px 0 0 0;
+    padding: 3px;
+}
+
+#form-check{
+    flex-direction: row;
+}
+
+#form-check input{
+    width: 26px;
+    margin: 3;
+}
+
+.form-control {
+    border-radius: 8px; /* Adjust the value as needed */
+    padding: 8px; /* Adjust the padding as needed */
+    border: 1px solid #ced4da; /* Border color */
+}
+
+/* Optional: Style when the textarea is focused */
+.form-control:focus {
+    border-color: #4d90fe; /* Example color for focus state */
+    outline: 0; /* Remove default focus styling */
+}
+
+.btn-primary {
+    background-color: #007bff; /* Blue color, adjust as needed */
+    color: #fff; /* Text color */
+    padding: 10px 20px; /* Adjust padding as needed */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Cursor style */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Darker shade of blue on hover */
+}
+
+
+
+
+
+.projectContainer {
+    margin-bottom: 20px;
+}
+
+.projectInfo {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+}
+
+.projectInfo h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.projectInfo ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.projectInfo li {
+    margin-bottom: 15px;
+}
+
+.projectInfo h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #007bff;
+}
+
+.projectInfo p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.researchContainer {
+    margin-bottom: 20px;
+}
+
+.researchInfo {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+}
+
+.researchInfo h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.researchInfo ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.researchInfo li {
+    margin-bottom: 15px;
+}
+
+.researchInfo h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #007bff;
+}
+
+.researchInfo p {
+    color: #555;
+    line-height: 1.6;
+}
+
+
+ .info-box {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.personal-info h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.phone, .email, .linkedin, .github {
+    margin: 5px 0;
+}
+
+.technical-skills, .relevant-coursework, .education, .hobbies {
+    margin-top: 20px;
+}
+
+.technical-skills h3, .relevant-coursework h3, .education h3, .hobbies h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+.portfolio-text {
+    font-family: 'Arial', sans-serif; /* Change the font family as per your preference */
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333; /* Adjust the text color */
+    margin-bottom: 20px; /* Add spacing at the bottom */
+}
