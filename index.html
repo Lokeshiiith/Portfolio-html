@@ -130,6 +130,8 @@
 				<ul class="navbar-nav nav ml-auto">
 					<li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
 					<li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+					<li class="nav-item"><a href="#coding-profile-section" class="nav-link"><span>Coding
+								Profile</span></a></li>
 					<li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
 					<li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
 					<li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
@@ -206,9 +208,11 @@
 				</div>
 			</div>
 		</div>
+
+		<div class="underline"></div>
 	</section>
 
-
+	<!--------------------------------- about section----------------------------------------------------------------- -->
 
 	<section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
 		<div class="container">
@@ -228,7 +232,7 @@
 									<div class="col-sm-6 col-md-7">
 										<div class="about-info">
 											<p><span class="title-s">Name: </span> <span>Lokesh Sharma</span></p>
-											<p><span class="title-s">Current Education: </span> <span>MTech CSE IIIT
+											<p><span class="title-s">Current Education: </span> <span>Pursuing MTech CSE @ IIIT
 													Hyderabad</span>
 											</p>
 											<!-- <p><span class="title-s">Experience: </span> <span>5 Years 3 Months</span>
@@ -354,7 +358,168 @@
 		</div>
 	</section>
 
+	<!-- ------------------coding section------------------------ -->
+	<!-- ------------------coding section------------------------ -->
+	<!-- ------------------coding section------------------------ -->
+	<!-- ------------------coding section------------------------ -->
+	<section class="ftco-section ftco-no-pb" id="coding-profile-section">
+		<div class="container">
+			<div class="row justify-content-center pb-5">
+				<div class="col-md-10 heading-section text-center ftco-animate">
+					<h2 class="mb-4">Coding Profile</h2>
+					<div class="underline"></div>
 
+					<p>Coding is just for training brain and helps to figure out data structures </p>
+				</div>
+			</div>
+
+			<div class="row">
+				<h1 class="big-4">Coding Stats</h1>
+				<div class="underline"></div>
+			</div>
+			<br>
+			<div class="row">
+				<!-- leetcode  -->
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<h2>LEETCODE</h2>
+
+						<img src="images/leetcode.png" alt="LeetCode Logo" class="college-logo"
+							style="max-width: 100%; height: auto;">
+						<div id="leetcodeStats"></div>
+						<script>
+							const leetcodeProfileApiUrl = "https://leetcode-stats-api.herokuapp.com/lokesh8126";
+							const leetcodeDataDiv = document.getElementById("leetcodeStats");
+
+							async function fetchLeetCodeData(leetcodeProfileApiUrl) {
+								try {
+									const response = await fetch(leetcodeProfileApiUrl);
+									if (!response.ok) {
+										throw new Error("Failed to fetch data");
+									}
+									const data = await response.json();
+									// Check for expected data in the response
+									if (!data || !data.hasOwnProperty('totalSolved') ||
+										!data.hasOwnProperty('easySolved') ||
+										!data.hasOwnProperty('mediumSolved') ||
+										!data.hasOwnProperty('hardSolved')) {
+										throw new Error("Unexpected API response format");
+									}
+									return data;
+								} catch (error) {
+									console.error("Error fetching data:", error);
+								}
+							}
+							async function displayLeetCodeStats() {
+								try {
+									const leetcodeData = await fetchLeetCodeData(leetcodeProfileApiUrl);
+									if (!leetcodeData) {
+										throw new Error("No data received");
+									}
+
+									const totalSolved = leetcodeData.totalSolved || 0;
+									const easySolved = leetcodeData.easySolved || 0;
+									const mediumSolved = leetcodeData.mediumSolved || 0;
+									const hardSolved = leetcodeData.hardSolved || 0;
+
+									leetcodeDataDiv.innerHTML = `
+												
+												<table border="1">
+													<tr>
+													<th>Category</th>
+													<th>Questions Solved</th>
+													</tr>
+													<tr>
+													<td>Easy</td>
+													<td>${easySolved}</td>
+													</tr>
+													<tr>
+													<td>Medium</td>
+													<td>${mediumSolved}</td>
+													</tr>
+													<tr>
+													<td>Hard</td>
+													<td>${hardSolved}</td>
+													</tr>
+													<tr>
+													<td>Total</td>
+													<td>${totalSolved}</td>
+													</tr>
+												</table>
+												`;
+								} catch (error) {
+									console.error("Error displaying LeetCode stats:", error);
+									// Optionally display an error message to the user
+									leetcodeDataDiv.innerHTML = "<p>API is busy. Please try again later.</p>";
+								}
+							}
+
+							console.log("Hello");
+							window.onload = displayLeetCodeStats;
+						</script>
+						<!-- add button of leetcode rofile -->
+						<br>
+						<p><a href="https://leetcode.com/lokesh8126/" class="btn btn-primary py-3 px-3">LeetCode
+								Profile</a></p>
+					</div>
+
+				</div>
+				<!-- geeksforgeeks -->
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<h2>Geeks For Geeks</h2>
+						<img src="images/gfg.png" alt="LeetCode Logo" class="college-logo"
+							style="max-width: 100%; height: auto;">
+						<br>
+						<p><a href="https://auth.geeksforgeeks.org/user/lokeshsharma123456/practice"
+								class="btn btn-primary py-3 px-3">GFG Profile</a></p>
+					</div>
+
+				</div>
+			</div>
+
+			<br>
+			<br>
+
+
+			<br>
+
+			<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<h2>Coding Ninjas</h2>
+						<img src="images/cn.png" alt="Coding Ninjas Logo" class="college-logo"
+							style="max-width: 100%; height: auto;">
+						<br>
+						<a href="https://www.naukri.com/code360/profile/Lokesh_8126"
+							class="btn btn-primary py-3 px-3">Coding Ninjas Profile</a>
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<h2>Interview Bit</h2>
+						<img src="images/ib.png" alt="Coding Ninjas Logo" class="college-logo"
+							style="max-width: 100%; height: auto;"><br>
+						<br>
+						<a href="https://www.interviewbit.com/profile/lokeshsharma123456/"
+							class="btn btn-primary py-3 px-3">interviewbit Profile</a>
+					</div>
+				</div>
+			</div>
+
+			<!-- <div class="row justify-content-center mt-5">
+					<div class="col-md-6 text-center ftco-animate">
+						<p><a href="#" class="btn btn-primary py-4 px-5">Download CV</a></p>
+					</div>
+				</div> -->
+		</div>
+	</section>
+
+	<!-- ------------------coding section------------------------ -->
+	<!-- ------------------coding section------------------------ -->
+	<!-- ------------------coding section------------------------ -->
+	<!-- ------------------coding section------------------------ -->
 
 
 	<section class="ftco-section ftco-no-pb" id="resume-section">
@@ -363,6 +528,8 @@
 				<div class="col-md-10 heading-section text-center ftco-animate">
 					<h1 class="big big-2">Resume</h1>
 					<h2 class="mb-4">Resume</h2>
+					<div class="underline"></div>
+
 					<p>Unveiling a Journey of Achievement and Potential.</p>
 					<p><a href="https://drive.google.com/file/d/1Oe3RHeKP6MbTXH4np6jcuGj5MY8E8qxg/view?usp=sharing"
 							class="btn btn-primary py-3 px-3" download>Download
@@ -437,7 +604,7 @@
 						<h2>Master of Technology</h2>
 						<span class="position">International Institue of Information and Technology (IIIT) - Hyderabad
 						</span>
-						<p class="mt-4">Grade: 7.6 CGPA.</p>
+						<!-- <p class="mt-4">Grade: 7.6 CGPA.</p> -->
 						<a href="https://www.iiit.ac.in/" class="btn btn-primary py-3 px-3">Visit College Website</a>
 					</div>
 				</div>
@@ -449,7 +616,7 @@
 							style="max-width: 100%; height: 50%;">
 						<h2>Bachelor of Technology</h2>
 						<span class="position">BTKIT DWARAHAT, UTTARAKHAND</span>
-						<p class="mt-4">Grade: 7.3</p>
+						<!-- <p class="mt-4">Grade: 7.3</p> -->
 						<a href="https://https://kecua.ac.in//" class="btn btn-primary py-3 px-3">Visit College
 							Website</a>
 					</div>
@@ -472,6 +639,8 @@
 				<div class="col-md-7 heading-section text-center ftco-animate">
 					<h1 class="big big-2">Projects and Research</h1>
 					<h2 class="mb-4">Projects and Research</h2>
+					<div class="underline"></div>
+
 					<p>Below are the projects and mini-projects done in IIIT HYDERABAD .</p>
 				</div>
 			</div>
@@ -634,7 +803,8 @@
 									<li><strong>Developed and successfully deployed:</strong> a user-friendly
 										<em>Streamlit application</em> to visualize
 										and meticulously analyze extensive climate data encompassing the diverse
-										Himalayan region states of India.</li>
+										Himalayan region states of India.
+									</li>
 									<li><strong>Achieved recognition:</strong> in the <em>Cloudera and AMD
 											Hackathon</em> on HackerEarth, securing a place
 										in the top 22 peers out of 2000. Utilized statistical and trend analysis methods
@@ -671,30 +841,37 @@
 					<div class="col-md-4 d-flex ftco-animate">
 						<div class="blog-entry justify-content-end">
 							<a href="https://github.com/Lokeshiiith/Stock-Prediction" class="block-20 zoom-effect"
-								style="background-image: url('images/proj_6.png');">
+								style="background-image: url('images/proj_7.png');">
 							</a>
 							<div class="text mt-3 float-right d-block">
-			
-								<h3 class="heading"><a href="https://github.com/Lokeshiiith/Stock-Prediction/blob/main/Stock_pred_tickerwise_modelwise.ipynb">Stock Prediction</a></h3>
-								<p><strong>Models, Methodology:</strong> Logistic Regression, Random Forest, SVM, Neural Networks, TF-IDF <a
-										href="[Github link]">Github link</a></p>
+
+								<h3 class="heading"><a
+										href="https://github.com/Lokeshiiith/Stock-Prediction/blob/main/Stock_pred_tickerwise_modelwise.ipynb">Stock
+										Prediction</a></h3>
+								<p><strong>Models, Methodology:</strong> Logistic Regression, Random Forest, SVM, Neural
+									Networks, TF-IDF <a href="https://github.com/Lokeshiiith/Stock-Prediction">Github
+										link</a></p>
 								<ul>
-									<li>Implemented an innovative sentiment analysis approach for stock prediction, integrating ML techniques.</li>
-									<li>Demonstrated the effectiveness of the innovative approach, achieved a 10% increase in accuracy.</li>
+									<li>Implemented an innovative sentiment analysis approach for stock prediction,
+										integrating ML techniques.</li>
+									<li>Demonstrated the effectiveness of the innovative approach, achieved a 10%
+										increase in accuracy.</li>
 								</ul>
-			
-								<p><a href="https://github.com/Lokeshiiith/Stock-Prediction" class="btn btn-primary py-3 px-3"
-										download>Github link</a>
+
+								<p><a href="https://github.com/Lokeshiiith/Stock-Prediction"
+										class="btn btn-primary py-3 px-3" download>Github link</a>
 								</p>
 							</div>
 						</div>
 					</div>
-			
-					
-					 
+
+
+
 				</div>
 			</div>
 	</section>
+
+
 
 	<section class="ftco-section contact-section ftco-no-pb" id="contact-section">
 		<div class="container">
@@ -702,6 +879,7 @@
 				<div class="col-md-7 heading-section text-center ftco-animate">
 					<h1 class="big big-2">Contact</h1>
 					<h2 class="mb-4">Contact Me</h2>
+					<div class="underline"></div>
 					<p>Below are the details to reach out to me!</p>
 				</div>
 			</div>
