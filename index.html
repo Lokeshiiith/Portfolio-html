@@ -2,48 +2,733 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lokesh Sharma - Programmer</title>
-    <link rel="stylesheet" href="style.css">
+	<title>Lokesh Sharma Portfolio</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+	<link rel="stylesheet" href="css/animate.css">
+
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+
+	<link rel="stylesheet" href="css/aos.css">
+
+	<link rel="stylesheet" href="css/ionicons.min.css">
+
+	<link rel="stylesheet" href="css/flaticon.css">
+	<link rel="stylesheet" href="css/icomoon.css">
+	<link rel="stylesheet" href="css/style.css">
+
+
+
+	<style>
+		/*======================================
+//--//-->   ABOUT
+======================================*/
+
+		.about-mf .box-shadow-full {
+			padding-top: 4rem;
+			padding-bottom: 4rem;
+		}
+
+		.about-mf .about-img {
+			margin-bottom: 2rem;
+		}
+
+		.about-mf .about-img img {
+			margin-left: 10px;
+		}
+
+
+		.skill-mf .progress {
+			/* background-color: #cde1f8; */
+			margin: .5rem 0 1.2rem 0;
+			border-radius: 0;
+			height: .7rem;
+		}
+
+		.skill-mf .progress .progress-bar {
+			height: .7rem;
+			background-color: #ffbd39;
+		}
+
+
+		/* Animation styles */
+		#typing-animation {
+			position: relative;
+			font-size: 30px;
+			font-weight: bold;
+			color: rgb(255, 255, 255);
+			overflow: hidden;
+			white-space: nowrap;
+			animation: typing 3s steps(20, end) infinite;
+		}
+
+		#typing-animation:before {
+			content: "";
+			/* position: absolute; */
+			top: 0;
+			left: 0;
+			width: 0;
+			height: 100%;
+			background-color: #ccc;
+			animation: typing-cursor 0.5s ease-in-out infinite;
+		}
+
+		@keyframes typing {
+			from {
+				width: 0;
+			}
+
+			to {
+				width: 100%;
+			}
+		}
+
+		@keyframes typing-cursor {
+			from {
+				width: 5px;
+			}
+
+			to {
+				width: 0;
+			}
+		}
+
+
+		/* project image zoom effect */
+
+		.zoom-effect {
+			overflow: hidden;
+			transition: transform 0.3s ease-out;
+		}
+
+		.zoom-effect:hover {
+			transform: scale(1.1);
+		}
+	</style>
+
+
 </head>
 
-<body>
-    <div class="container">
-        <div class="sidebar">
-            <nav>
-                <ul>
-                    <li><a href=".">Home</a></li>
-                    <li><a href="intro.html">My Intro</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="cv.html">CV</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="main">
-            <div class="infocontainer">
-                <div class="devInfo">
-                    <div class="hello">Hi I am</div>
-                    <div class="name">Lokesh Sharma</div>
-                    <div class="about">Developer, Programmer, Cyclist</div>
-                    <div class="moreabout">I am a web developer and programmer. Currently pursuing Master from IIIT
-                        Hyderabad</div>
-                    <!-- <p>Will update the projects and links. Its just a show case made in 2 hours</p> -->
-                    <div class="buttons">
-                        <a href="lokesh.txt" download="lokeshsharma.txt">
-                            <button>Download CV</button></a>
-                        <a href="contact.html"><button>Contact</button></a>
-                    </div>
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 
-                </div>
-                <div class=" devPic">
-                    <img src="./lokesh.jpg" alt="Lokesh Sharma">
-                </div>
-            </div>
-        </div>
-    </div>
+
+	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+		<div class="container">
+			<a class="navbar-brand" href="index.html">LOKESH SHARMA</a>
+			<button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse"
+				data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="oi oi-menu"></span> Menu
+			</button>
+
+			<div class="collapse navbar-collapse" id="ftco-nav">
+				<ul class="navbar-nav nav ml-auto">
+					<li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+					<li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+					<li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+					<li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+					<li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<section id="home-section" class="hero">
+		<div class="home-slider  owl-carousel">
+			<div class="slider-item ">
+				<div class="overlay"></div>
+				<div class="container">
+					<div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end"
+						data-scrollax-parent="true">
+						<div class="one-third js-fullheight order-md-last img"
+							style="background-image:url(images/bg_1.png);">
+							<div class="overlay"></div>
+						</div>
+						<div class="one-forth d-flex  align-items-center ftco-animate"
+							data-scrollax=" properties: { translateY: '70%' }">
+							<div class="text">
+								<span class="subheading">Hello!</span>
+								<h1 class="mb-4 mt-3">I'm <span>LOKESH SHARMA</span></h1>
+
+								<!-- Element to contain animated typing -->
+								<span id="typing-animation"></span>
+
+								<script>
+
+									// Initialize the typing animation
+									const typingAnimationElement = document.getElementById('typing-animation');
+
+									// Create an array of typing text
+									const typingTexts = [
+										'C++ Programmer',
+										'ML Enthusiast',
+										'Web Developer',
+										'Cyclist',
+									];
+
+									// Create a function to display the typing animation for a given text
+									function playTypingAnimation(text) {
+										// Loop through each character and add it to the element
+										for (let i = 0; i < text.length; i++) {
+											setTimeout(() => {
+												typingAnimationElement.textContent += text[i];
+											}, i * 200); // Increase the delay to slow down the typing animation
+										}
+
+										// Once the animation is complete, reset the text and start over
+										setTimeout(() => {
+											typingAnimationElement.textContent = '';
+											playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+										}, text.length * 200);
+									}
+
+									// Start the typing animation loop
+									playTypingAnimation(typingTexts[0]);
+
+								</script>
+
+								<br>
+								<br>
+								<h2>Pursuing MTech CSE at IIIT Hyderabad(2022-24) </h2>
+								<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+								<!-- <br> -->
+								<p>
+									<a href="https://github.com/lokeshiiith"
+										class="btn btn-white btn-outline-white py-3 px-4">My github</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+	<section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+		<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+					<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+										<div class="about-img">
+											<img src="images/about-me.png" class="img-fluid rounded b-shadow-a" alt="">
+										</div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+										<div class="about-info">
+											<p><span class="title-s">Name: </span> <span>Lokesh Sharma</span></p>
+											<p><span class="title-s">Current Education: </span> <span>MTech CSE IIIT
+													Hyderabad</span>
+											</p>
+											<!-- <p><span class="title-s">Experience: </span> <span>5 Years 3 Months</span>
+											</p> -->
+											<p><span class="title-s">Address: </span> <span>IIIT HYDERABAD </span></p>
+										</div>
+									</div>
+								</div>
+
+								<div class="skill-mf">
+									<p class="title-s">Skills</p>
+									<span>C++</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%;"
+											aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+
+									<span>PYTHON</span> <span class="pull-right">75%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 75%"
+											aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+
+									<span>Data Visualization</span> <span class="pull-right">60%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%"
+											aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+
+									<span>MERN STACK</span> <span class="pull-right">50%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 50%"
+											aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+
+									<span>Machine Learning</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%"
+											aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+
+								<p>Hello, I'm <strong>Lokesh Sharma</strong>, a passionate and dedicated professional in
+									the field of <strong>Computer
+										Science and Engineering</strong>.</p>
+
+								<p>My expertise lies in languages like <strong>C, C++, Python,</strong> and
+									<strong>Racket</strong>, coupled with
+									hands-on experience in <strong>HTML, CSS,</strong> <em>JavaScript,</em> and
+									<strong>React</strong>. Throughout my
+									career, I've worked on a variety of projects ranging from <em>distributed IoT
+										platforms</em> to <em>peer-to-peer
+										file transfer systems</em>, demonstrating my adaptability and problem-solving
+									skills.</p>
+
+								<p>I am currently pursuing a Master's degree in <strong>Computer Science</strong> from
+									<strong>IIIT Hyderabad</strong>,
+									where I delved deep into advanced topics like <em>Data Structures and
+										Algorithms,</em> <em>Operating Systems,</em>
+									and <em>Software Systems Development</em>. My academic journey has been complemented
+									by practical experiences,
+									<strong>collaborative projects,</strong> which have equipped me with a robust skill
+									set and a passion for continuous
+									learning.
+								</p>
+
+								<p>In addition to my technical skills, I am adept at version control systems like
+									<strong>Git</strong> and
+									<strong>GitHub,</strong> and I have a strong foundation in <em>system design
+										principles</em> and <em>software
+										development methodologies</em>. I thrive in collaborative environments, where I
+									can leverage my <strong>critical
+										thinking abilities</strong> and <strong>creative problem-solving skills</strong>
+									to drive innovation and achieve
+									results.
+								</p>
+
+								<!-- <ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Profile:</span> <span>Data Science &amp; Analytics</span>
+									</li>
+									<li class="d-flex"><span>Domain:</span> <span>Retail, Ecommerce, BFSI &amp; Digital
+											Marketing</span></li>
+									<li class="d-flex"><span>Education:</span> <span>Bachelor of Engineering</span></li>
+									<li class="d-flex"><span>Language:</span> <span>English, Hindi</span></li>
+									<li class="d-flex"><span>BI Tools:</span> <span>Microsoft Power BI, Looker &amp;
+											Tableau</span></li>
+									<li class="d-flex"><span>Other Skills:</span> <span>Cloud, PySpark, Excel, Git,
+											JIRA, Google Analytics &amp; SEO</span></li>
+									<li class="d-flex"><span>Interest:</span> <span>Traveling, Travel Photography,
+											Teaching</span></li>
+
+								</ul> -->
+							</div>
+						</div>
+
+
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<p class="mb-4">
+									<span class="number" data-number="20">0</span> <span>+</span>
+									<span>&nbsp; successful projects and mini-projects completed with and without
+										through collaboration, learning the art of effective teamwork along
+										the way" </span>
+								</p>
+								<p><a href="https://www.linkedin.com/in/lokesh-sharma-iiith/"
+										class="btn btn-primary py-3 px-3">LinkedIn</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+
+	<section class="ftco-section ftco-no-pb" id="resume-section">
+		<div class="container">
+			<div class="row justify-content-center pb-5">
+				<div class="col-md-10 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Resume</h1>
+					<h2 class="mb-4">Resume</h2>
+					<p>Unveiling a Journey of Achievement and Potential.</p>
+					<p><a href="https://drive.google.com/file/d/1Oe3RHeKP6MbTXH4np6jcuGj5MY8E8qxg/view?usp=sharing"
+							class="btn btn-primary py-3 px-3" download>Download
+							Resume</a></p>
+
+				</div>
+			</div>
+
+			<div class="row">
+				<h1 class="big-4">Experience</h1>
+				<div class="underline"></div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2019 - 2021</span>
+						<h2>Freelance Web Developer</h2>
+						<span class="position">M/S BHAGWATI ENTERPRISES(GST TIN- 05EBYPS660H2Z4)</span>
+						<p class="mt-4">Designed and developed frontend websites for over 5 private firms, showcasing
+							their work and production to target
+							audiences.
+							<!-- <ul>
+							<li>Analysed ad campaigns, clickstream, and customer surveys data, identified an increasing
+								demand and launched a strategic product line.</li>
+							<li>Developed time series forecasting models to predict sales and optimize marketing
+								budgets, got model performance of 92%.</li>
+							<li>Designed and executed A/B tests, performed rigorous statistical analysis. Led to 20% MoM
+								increase in the conversion rate.</li>
+						</ul> -->
+						</p>
+					</div>
+
+				</div>
+
+				<!-- <div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2018-2021</span>
+						<h2>Senior Data Analyst</h2>
+						<span class="position">iQuanti</span>
+						<p class="mt-4">iQuanti is a data-driven digital marketing analytics and solutions company,
+							helps top 100 global brands.
+						<ul>
+							<li>Performed in-depth market research and analysis to create online pages. Resulted in
+								~100% website growth and 30% increase in conversion rate YoY.</li>
+							<li>Delivered multiple training and mentorship sessions on analytical tools like SQL, MS
+								Excel, Power BI, Tableau and Python.</li>
+							<li>Performed migration and enhancements for merchandising dashboard, involved data
+								integration and its feature improvement.</li>
+						</ul>
+						</p>
+					</div>
+
+				</div> -->
+			</div>
+
+			<br>
+			<br>
+
+			<div class="row">
+				<h1 class="big-4">Education</h1>
+				<div class="underline"></div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2022-24</span>
+						<img src="images/IIIT.png" alt="IIIT Hyderabad Logo" class="college-logo"
+							style="max-width: 100%; height: auto;">
+						<h2>Master of Technology</h2>
+						<span class="position">International Institue of Information and Technology (IIIT) - Hyderabad
+						</span>
+						<p class="mt-4">Grade: 7.6 CGPA.</p>
+						<a href="https://www.iiit.ac.in/" class="btn btn-primary py-3 px-3">Visit College Website</a>
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2015-19</span>
+						<img src="images/btkit.png" alt="BTKIT Logo" class="college-logo"
+							style="max-width: 100%; height: 50%;">
+						<h2>Bachelor of Technology</h2>
+						<span class="position">BTKIT DWARAHAT, UTTARAKHAND</span>
+						<p class="mt-4">Grade: 7.3</p>
+						<a href="https://https://kecua.ac.in//" class="btn btn-primary py-3 px-3">Visit College
+							Website</a>
+					</div>
+				</div>
+			</div>
+
+			<!-- <div class="row justify-content-center mt-5">
+				<div class="col-md-6 text-center ftco-animate">
+					<p><a href="#" class="btn btn-primary py-4 px-5">Download CV</a></p>
+				</div>
+			</div> -->
+		</div>
+	</section>
+
+
+
+	<section class="ftco-section" id="project-section">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-5">
+				<div class="col-md-7 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Projects and Research</h1>
+					<h2 class="mb-4">Projects and Research</h2>
+					<p>Below are the projects and mini-projects done in IIIT HYDERABAD .</p>
+				</div>
+			</div>
+			<div class="row d-flex">
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://github.com/Lokeshiiith/Distributed-IOT-Based-App-Development-Platform"
+							class="block-20 zoom-effect" style="background-image: url('images/proj1.png');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a>Feb 2023 - Distributed IoT Based App Development Platform</a></h3>
+							<p>Collaborated on a platform project for deploying, scaling, and monitoring IoT-based
+								applications, utilizing oneM2M for
+								efficient and seamless data collection in IoT environments. Implemented robust
+								monitoring services and fault-tolerance
+								mechanisms for uninterrupted operation. Developed a live tracker of subsystems using
+								React, fetching real-time data from
+								MongoDB.</p>
+							<I>Tech Stack: Python, Kafka, MongoDB, Azure App Services, Microservice</I>
+							<p><a href="https://github.com/Lokeshiiith/Distributed-IOT-Based-App-Development-Platform"
+									class="btn btn-primary py-3 px-3" download>GITHUB LINK</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://github.com/Lokeshiiith/Peer-to-Peer-Multi-Client-File-Transfer-System"
+							class="block-20 zoom-effect" style="background-image: url('images/proj_2.png');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a
+									href="https://github.com/Lokeshiiith/Peer-to-Peer-Multi-Client-File-Transfer-System">Peer-to-Peer
+									Multiclient File Transfer System</a></h3>
+							<p>Developed a robust file-sharing system where users can share and download files within
+								the groups they belong to. Built
+								tracker and client modules with fault tolerance incorporated within the tracker. In
+								addition to reliability, provided an
+								efficient solution, namely, in terms of file download rate.</p>
+							<I>Tech Stack: Socket Programming, Multithreading, Modular Programming, Extensive use of
+								System Calls</I>
+							<p><a href="https://github.com/Lokeshiiith/Peer-to-Peer-Multi-Client-File-Transfer-System"
+									class="btn btn-primary py-3 px-3" download>GITHUB LINK</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry">
+						<a href="https://github.com/Lokeshiiith/Climate_change_monitoring_tool"
+							class="block-20 zoom-effect" style="background-image: url('images/proj_3.png');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a
+									href="https://github.com/Lokeshiiith/Climate_change_monitoring_tool/blob/main/TemperatureAnalysis.ipynb">Sep
+									2023 - Climate Change analysis tool for Himalayan belt</a></h3>
+							<p>• Independent Study: Conducted analysis, clipping, and interpolation on 60-70 years of
+								temperature and
+								precipitation data to identify new geospatial timberline points using the Aphrodite and
+								IMD datasets.</p>
+							<p>• Developed and successfully deployed a user-friendly Streamlit application to visualize
+								and meticulously analyze
+								extensive climate data encompassing the diverse Himalayan region states of India.</p>
+							<p>• Achieved recognition in the Cloudera and AMD Hackathon on HackerEarth, securing a place
+								in the top 22 peers out of 2000. Utilized statistical and trend analysis methods to
+								identify critical
+								timberline ranges. </p>
+							<p><a href="https://www.hackerearth.com/challenges/hackathon/climate-and-sustainability-hackathon-with-cloudera-and-amd/submissions/#submissions"
+									class="btn btn-primary py-3 px-3" download>Verify</a>
+							</p>
+							<i>
+								<p>• Technologies: Python, Interpolation, Streamlit, Azure webservices(CI CD integration
+									with github actions),GIS.</p>
+							</i>
+							<p>Webiste is little bit slow as my credits in azure is zero, so using free hosting</p>
+							<p><a href="https://clouderahackiiith.azurewebsites.net/" class="btn btn-primary py-3 px-3"
+									download>Go to website</a> <a
+									href="https://github.com/Lokeshiiith/Climate_change_monitoring_tool"
+									class="btn btn-primary py-3 px-3" download>GITHUB LINK</a>
+							</p>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<br>
+			<!-- added justify-content-center to center align the last two projects -->
+			<div class="row d-flex justify-content-center">
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://github.com/Lokeshiiith/Terminal-Based-File-Explorer"
+							class="block-20 zoom-effect" style="background-image: url('images/proj_4.png');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a
+									href="https://github.com/Lokeshiiith/Terminal-Based-File-Explorer">Terminal Based
+									File Explorer</a></h3>
+							<p>Created a feature-rich terminal-based file explorer with Normal Mode for directory
+								navigation and Command
+								Mode for executing file and directory operations.</p>
+							<p> stack-based navigation, queue data structures, and LRU cache for efficiency.</p>
+							<p><a href="https://github.com/Lokeshiiith/Terminal-Based-File-Explorer"
+									class="btn btn-primary py-3 px-3" download>GITHUB LINK</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://github.com/Lokeshiiith/EstProjectP" class="block-20 zoom-effect"
+							style="background-image: url('images/proj_5.png');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a
+									href="https://github.com/Lokeshiiith/EstProjectP/blob/main/est.ipynb">Coal Mines and
+									Methane Emission Analysis</a></h3>
+							<p>Conducted analysis to evaluate the correlation between coal mines and methane emissions,
+								identifying trends and
+								potential environmental impacts.</p>
+							<p>Can easily be deployed on Streamlit.</p>
+							<p><a href="https://github.com/Lokeshiiith/EstProjectP" class="btn btn-primary py-3 px-3"
+									download>GITHUB LINK</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-3">
+				<div class="col-md-7 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Contact</h1>
+					<h2 class="mb-4">Contact Me</h2>
+					<p>Below are the details to reach out to me!</p>
+				</div>
+			</div>
+
+			<div class="row d-flex contact-info mb-5">
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-map-signs"></span>
+						</div>
+						<h3 class="mb-4">Address</h3>
+						<p>IIIT HYDERABAD</p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-phone2"></span>
+						</div>
+						<h3 class="mb-4">Contact Number</h3>
+						<p><a href="tel://0101010101">+91 8126449754</a></p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-paper-plane"></span>
+						</div>
+						<h3 class="mb-4">Email Address</h3>
+						<p><a href="mailto:info@yoursite.com">lokeshsharma123456@gmail.com</a></p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-globe"></span>
+						</div>
+						<p><a href="https://drive.google.com/file/d/1Oe3RHeKP6MbTXH4np6jcuGj5MY8E8qxg/view?usp=sharing"
+								class="btn btn-primary py-3 px-3" download>Download
+								Resume</a></p>
+					</div>
+				</div>
+
+				<div class="container">
+					<br>
+					<br>
+					<div class="row justify-content-center">
+						<div class="col-md-7 ftco-animate text-center">
+							<h2>Have a<span> Question? </span> <a href="https://forms.gle/Lw1d53d3r5CXvbdn9"
+									class="btn btn-primary py-3 px-5">Click Here to fill the query form</a> </h2>
+						</div>
+					</div>
+					<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+						<li class="ftco-animate normal-txt">Find me on </li>
+						<li class="ftco-animate"><a href="https://www.linkedin.com/in/lokesh-sharma-iiith/"><span
+									class="icon-linkedin"></span></a></li>
+
+					</ul>
+					<br>
+				</div>
+				<div style="display: flex; justify-content: center;">
+					<div style="display: flex; justify-content: center;">
+						<iframe
+							src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d951.5763839441913!2d78.34618810699159!3d17.445069326066907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1sen!2sin!4v1712320018167!5m2!1sen!2sin"
+							width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+							referrerpolicy="no-referrer-when-downgrade"></iframe>
+					</div>
+				</div>
+
+			</div>
+	</section>
+
+
+
+
+	<footer class="ftco-footer ftco-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+
+					<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+						Copyright &copy;
+						<script>document.write(new Date().getFullYear());</script> All rights reserved | This template
+						is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by 
+						<a href="https://colorlib.com" target="_blank">Colorlib</a>
+						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+	<!-- loader -->
+	<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+			<circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+			<circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+				stroke="#F96D00" />
+		</svg></div>
+
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-migrate-3.0.1.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="js/jquery.stellar.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/aos.js"></script>
+	<script src="js/jquery.animateNumber.min.js"></script>
+	<script src="js/scrollax.min.js"></script>
+
+	<script src="js/main.js"></script>
+
 </body>
 
 </html>
